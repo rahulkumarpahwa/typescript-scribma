@@ -2,7 +2,7 @@
 CHALLENGE: Type this 'words' array
 */
 
-type Word = string;
+export type Word = string;
 
 export const words: Word[] = [
     "about",

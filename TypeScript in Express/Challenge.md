@@ -66,3 +66,10 @@
 12. CHALLENGE: Make the Response type more specific
     for this `/` route!
     TIP: You may need to export and import a custom type
+
+13. CHALLENGE: Complete the `/:id` route!
+    1. Type req, res, and callback's return value
+    2. Pull the `id` from the path params
+    3. Find the pet that matches said `id`
+    4. Send back said pet with `res.json()`
+    Don't worry about non-existent IDs or other TypeScript yet

@@ -44,3 +44,11 @@
    2. Change `pets` to be an array with 2+ pets
    3. Adjust the type of `pets`
    4. Change out the res.json to send back the new variable
+
+8. CHALLENGE: Fix the Pet type!
+   1. Look at the pet objects and note their properties
+   2. Update the `Pet` type so it matches
+   3. Decide which fields should be optional (compare #1 and #2)
+
+   Hint: some fields might need unions, arrays, literals, `null`, or even a `Date`.
+   Look them up if you’re not sure!

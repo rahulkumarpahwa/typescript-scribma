@@ -1,21 +1,32 @@
 /*
-CHALLENGE: Send back a response
-1. Add a GET route for `/` that responds with an empty JSON object.
-2. Compile the app with `npx tsc`
-3. Run the compiled JavaScript with `node dist/index.js`
-   
-(Ignore any TypeScript warning for now)
+CHALLENGE: Respond with some data!
+1. Create an object called `pet` before the `/` route that includes:
+   - name (string)
+   - species (string)
+   - adopted (boolean)
+   - age (number)
+2. Type your new pet object (inline or using a custom type)
+3. Update your existing GET `/` route to return that pet object
+4. Compile the TypeScript and run the resulting JavaScript to see it in action
 */
 
 import express from "express";
 import type { Express, Request, Response } from "express";
 import { env as loadEnv } from "custom-env";
+import type { Pet } from "./types/pet.ts";
 const app: Express = express();
 
 loadEnv();
 
-app.get("/", (req : Request, res : Response) =>{
-    res.status(200).json({})
+const pet: Pet = {
+    name: "Scooby",
+    species: "Dog",
+    adopted: true,
+    age: 2
+}
+
+app.get("/", (req: Request, res: Response) => {
+    res.status(200).json({ pet })
 })
 
 

@@ -62,3 +62,7 @@
 11. CHALLENGE: Create a 404 catch-all after the `/` route
     Don’t forget to type annotate everything!
     (there are 3 places)
+
+12. CHALLENGE: Make the Response type more specific
+    for this `/` route!
+    TIP: You may need to export and import a custom type

@@ -1,13 +1,13 @@
-/* 
-CHALLENGE: Create a 404 catch-all after the `/` route
-           Don’t forget to type annotate everything!
-           (there are 3 places)
-           
-HINT: In `hint.md`
+/*
+CHALLENGE: Make the Response type more specific
+           for this `/` route!
+TIP: You may need to export and import a custom type
 */
+
 import express from "express";
 import cors, { type CorsOptions } from "cors";
 import type { Express, Request, Response } from "express";
+import type { Pet } from "./types/pet.ts";
 import { env as loadEnv } from "custom-env";
 import { pets } from "./data/pets.ts";
 const app: Express = express();
@@ -23,11 +23,11 @@ const corsOptions: CorsOptions = {
 
 app.use(cors(corsOptions));
 
-app.get("/", (req: Request, res: Response): void => {
-    res.status(200).json({ pets })
+app.get("/", (req: Request, res: Response<Pet[]>): void => {
+    res.status(200).json(pets)
 })
 
-app.use((req: Request, res: Response): void => {
+app.use((req: Request, res: Response<{ message: string }>): void => {
     res.status(404).json({ message: "Endpoint not found" })
 })
 

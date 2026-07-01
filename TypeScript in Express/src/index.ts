@@ -1,6 +1,9 @@
-/*
-CHALLENGE: Figure out why `cors` is cors-ing an error...
-           and fix it!
+/* 
+CHALLENGE: Create a 404 catch-all after the `/` route
+           Don’t forget to type annotate everything!
+           (there are 3 places)
+           
+HINT: In `hint.md`
 */
 import express from "express";
 import cors, { type CorsOptions } from "cors";
@@ -22,6 +25,10 @@ app.use(cors(corsOptions));
 
 app.get("/", (req: Request, res: Response): void => {
     res.status(200).json({ pets })
+})
+
+app.use((req: Request, res: Response): void => {
+    res.status(404).json({ message: "Endpoint not found" })
 })
 
 const server = app.listen(process.env.PORT, (): void => {

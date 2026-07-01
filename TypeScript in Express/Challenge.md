@@ -58,3 +58,7 @@
 
 10. CHALLENGE: Figure out why `cors` is cors-ing an error...
     and fix it!
+
+11. CHALLENGE: Create a 404 catch-all after the `/` route
+    Don’t forget to type annotate everything!
+    (there are 3 places)

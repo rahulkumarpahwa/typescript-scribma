@@ -55,3 +55,6 @@
 
 9. CHALLENGE: Use the newly imported Request and Response types
    to type the `req` and `res` parameters
+
+10. CHALLENGE: Figure out why `cors` is cors-ing an error...
+    and fix it!

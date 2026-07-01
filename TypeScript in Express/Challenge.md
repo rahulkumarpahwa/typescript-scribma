@@ -52,3 +52,6 @@
 
    Hint: some fields might need unions, arrays, literals, `null`, or even a `Date`.
    Look them up if you’re not sure!
+
+9. CHALLENGE: Use the newly imported Request and Response types
+   to type the `req` and `res` parameters
